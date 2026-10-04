@@ -1,0 +1,57 @@
+# Visual Studio / .NET defaults
+## Build folders
+bin/
+obj/
+Debug/
+Release/
+
+## Visual Studio files
+.vs/
+*.user
+*.suo
+*.userprefs
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+*.vbproj.user
+
+## Rider / JetBrains
+.idea/
+*.DotSettings.user
+
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+## Build output
+*.log
+*.cache
+*.db
+TestResults/
+
+## Tools
+*.vsix
+*.ncrunch*
+
+## VS Code
+.vscode/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+# Ignore publish output
+publish/
+
+# Node (if ever used)
+node_modules/
+
+# Ignore user secrets
+secrets.json
+
+# Ignore JetBrains Rider caches
+.idea/
+
+# End of .gitignore
