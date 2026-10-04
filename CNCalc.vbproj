@@ -84,6 +84,7 @@
 	<Compile Include="main.vb">
 	  <SubType>Form</SubType>
 	</Compile>
+	<Compile Include="FormatHelpers.vb" />
 	<Compile Include="My Project\Application.Designer.vb">
 	  <AutoGen>True</AutoGen>
 	  <DesignTime>True</DesignTime>
@@ -109,7 +110,7 @@
 	<None Include="MyApplication.Designer.vb" />
 	<None Include="MyApplication.myapp" />
 	<None Include="NULLREFERENCE_FIX_REPORT.md" />
-	<None Include="VBScratcu.ico" />
+	<None Include="CNCalc.ico" />
 	<None Include="ProjectTemplate.vbproj" />
 	<None Include="Resources.Designer.vb" />
 	<None Include="Resources.resx" />
@@ -121,11 +122,7 @@
   <ItemGroup>
 	<VSTemplate Include="CNCalc.vstemplate" />
   </ItemGroup>
-  <ItemGroup>
-	<EmbeddedResource Include="main.resx">
-	  <DependentUpon>main.vb</DependentUpon>
-	</EmbeddedResource>
-  </ItemGroup>
+	<!-- main.resx embedded resource left as file in project; ensure main.vb exists alongside it. -->
   <ItemGroup>
 	<None Include="My Project\Application.myapp">
 	  <Generator>MyApplicationCodeGenerator</Generator>

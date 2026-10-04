@@ -19,6 +19,24 @@ Public Class SettingsForm
         End Set
     End Property
 
+    Public Property AssumedLat As String
+        Get
+            Return AssumedLatTextBox.Text
+        End Get
+        Set(value As String)
+            AssumedLatTextBox.Text = value
+        End Set
+    End Property
+
+    Public Property AssumedLon As String
+        Get
+            Return AssumedLonTextBox.Text
+        End Get
+        Set(value As String)
+            AssumedLonTextBox.Text = value
+        End Set
+    End Property
+
     Public Property HeightUnit As String
         Get
             If ImperialRadioButton.Checked Then
@@ -101,6 +119,8 @@ Public Class SettingsForm
         ' Load settings from Registry
         DefaultHeye = CStr(Microsoft.Win32.Registry.GetValue(regKey, "DefaultHeye", ""))
         DefaultIE = CStr(Microsoft.Win32.Registry.GetValue(regKey, "DefaultIE", ""))
+        AssumedLat = CStr(Microsoft.Win32.Registry.GetValue(regKey, "AssumedLat", ""))
+        AssumedLon = CStr(Microsoft.Win32.Registry.GetValue(regKey, "AssumedLon", ""))
         HeightUnit = CStr(Microsoft.Win32.Registry.GetValue(regKey, "HeightUnit", "Feet"))
         PressureUnit = CStr(Microsoft.Win32.Registry.GetValue(regKey, "PressureUnit", "mb"))
         AngleFormat = CStr(Microsoft.Win32.Registry.GetValue(regKey, "AngleFormat", "DMS"))
@@ -111,6 +131,8 @@ Public Class SettingsForm
         If Me.DialogResult = DialogResult.OK Then
             Microsoft.Win32.Registry.SetValue(regKey, "DefaultHeye", DefaultHeye)
             Microsoft.Win32.Registry.SetValue(regKey, "DefaultIE", DefaultIE)
+            Microsoft.Win32.Registry.SetValue(regKey, "AssumedLat", AssumedLat)
+            Microsoft.Win32.Registry.SetValue(regKey, "AssumedLon", AssumedLon)
             Microsoft.Win32.Registry.SetValue(regKey, "HeightUnit", HeightUnit)
             Microsoft.Win32.Registry.SetValue(regKey, "PressureUnit", PressureUnit)
             Microsoft.Win32.Registry.SetValue(regKey, "AngleFormat", AngleFormat)
